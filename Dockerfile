@@ -59,4 +59,6 @@ WORKDIR /app
 COPY ARMS-Frontend/package.json /app
 RUN npm install
 COPY ARMS-Frontend /app
+EXPOSE 8087
 CMD ["npm", "start"]
+
