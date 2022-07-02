@@ -46,7 +46,7 @@ FROM openjdk:12-alpine
 #
 ARG BUILD_HOME
 ENV APP_HOME=$BUILD_HOME
-COPY --from=build-image $APP_HOME/ARMS-Backend/ARMS-Backend-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build-image $APP_HOME/src/ARMS-Backend-0.0.1-SNAPSHOT.jar app.jar
 
 #
 # The command to run when the container starts.
