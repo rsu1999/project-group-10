@@ -8,8 +8,8 @@ ARG BUILD_HOME=/project-group-10
 #
 FROM gradle:7.1.0-jdk11 as build-image
 
-ENV JAVA_HOME /opt/java/openjdk/bin/java
-ENV PATH $JAVA_HOME/bin:$PATH
+ENV JAVA_HOME /opt/java/openjdk
+
 #
 # Set the working directory.
 #
