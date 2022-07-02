@@ -55,8 +55,8 @@ ENTRYPOINT java -jar app.jar
 
 FROM node:alpine
 
-WORKDIR $APP_HOME/ARMS-Frontend
-COPY $APP_HOME/ARMS-Frontend/package.json /app
+#WORKDIR $APP_HOME/ARMS-Frontend
+COPY ARMS-Frontend/package.json /app
 RUN npm install
-COPY . $APP_HOME/ARMS-Frontend
+COPY ARMS-Frontend /app
 CMD ["npm", "start"]
