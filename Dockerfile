@@ -33,8 +33,8 @@ RUN chown -R gradle /project-group-10 # This changes ownership of folder
 USER gradle 
 RUN whereis java
 
-RUN gradle --no-daemon build
-RUN gradle bootJar
+RUN gradle --no-daemon build  && java -jar build/libs/ARMS-Backend-0.0.1-SNAPSHOT.jar
+
 
 #
 # Java image for the application to run in.
