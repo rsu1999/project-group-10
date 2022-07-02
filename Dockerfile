@@ -26,8 +26,8 @@ COPY --chown=gradle:gradle ARMS-Backend $APP_HOME/src
 #
 # Build the application.
 #
-RUN gradle --no-daemon build
-RUN gradle bootJar
+RUN ./gradlew --no-daemon build
+RUN ./gradlew bootJar
 
 #
 # Java image for the application to run in.
