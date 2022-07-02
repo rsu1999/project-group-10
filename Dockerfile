@@ -47,7 +47,7 @@ FROM openjdk:12-alpine
 ARG BUILD_HOME
 ENV APP_HOME=$BUILD_HOME
 COPY --from=build-image $APP_HOME/src/ARMS-Backend-0.0.1-SNAPSHOT.jar app.jar
-
+EXPOSE 8080
 #
 # The command to run when the container starts.
 #
@@ -59,6 +59,6 @@ WORKDIR /app
 COPY ARMS-Frontend/package.json /app
 RUN npm install
 COPY ARMS-Frontend /app
-EXPOSE 8087
+
 CMD ["npm", "start"]
 
