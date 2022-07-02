@@ -3,6 +3,8 @@
 #
 ARG BUILD_HOME=/project-group-10
 
+ENV JAVA_HOME /opt/java/openjdk/bin/java
+ENV PATH $JAVA_HOME/bin:$PATH
 #
 # Gradle image for the build stage.
 #
@@ -30,7 +32,7 @@ USER root
 RUN chown -R gradle /project-group-10 # This changes ownership of folder
 USER gradle 
 RUN whereis java
-RUN find /usr/lib/jvm/java*
+
 RUN gradle --no-daemon build
 RUN gradle bootJar
 
