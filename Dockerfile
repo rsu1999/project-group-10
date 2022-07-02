@@ -29,6 +29,8 @@ COPY --chown=gradle:gradle ARMS-Backend $APP_HOME/src
 USER root 
 RUN chown -R gradle /project-group-10 # This changes ownership of folder
 USER gradle 
+RUN whereis java
+RUN find /usr/lib/jvm/java*
 RUN gradle --no-daemon build
 RUN gradle bootJar
 
