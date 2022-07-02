@@ -53,12 +53,12 @@ EXPOSE 8080
 #
 ENTRYPOINT java -jar app.jar
 
-FROM node:alpine
+#####FROM node:alpine
 
-WORKDIR /app
-COPY ARMS-Frontend/package.json /app
-RUN npm install
-COPY ARMS-Frontend /app
+#WORKDIR /app
+#COPY ARMS-Frontend/package.json /app
+#RUN npm install
+#COPY ARMS-Frontend /app
 
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
 
